@@ -383,6 +383,10 @@ header a:hover, header a:visited,header a:focus{
    letter-spacing: 0.214124px;
    color: #586795;
    overflow: hidden;
+   transition: all .5s ease-in-out;
+}
+.vidDetails .about .showmore{
+   height: auto;
 }
 
 .vidDetails .about a{
