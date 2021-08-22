@@ -1,0 +1,11 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="house-chimney-2 1" clip-path="url(#clip0)">
+<path id="Vector" d="M2.50269 9.28198V14.782H6.50269V10.782C6.50269 10.5168 6.60804 10.2624 6.79558 10.0749C6.98312 9.88734 7.23747 9.78198 7.50269 9.78198H8.50269C8.7679 9.78198 9.02226 9.88734 9.20979 10.0749C9.39733 10.2624 9.50269 10.5168 9.50269 10.782V14.782H13.5027V9.28198" stroke="#FFCB13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M0.502686 8.28199L7.29602 1.48932C7.48355 1.30185 7.73786 1.19653 8.00302 1.19653C8.26818 1.19653 8.52249 1.30185 8.71002 1.48932L15.5027 8.28199" stroke="#FFCB13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>
