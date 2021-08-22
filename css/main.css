@@ -39,7 +39,7 @@ header a:hover, header a:visited,header a:focus{
    padding-right: 25px;
    background: url(../img/+.png);
    background-repeat: no-repeat;
-   background-position: right center;
+    background-position: right top 5px;
    background-repeat: no-repeat;
 }
 .profileBox{
@@ -79,7 +79,7 @@ header a:hover, header a:visited,header a:focus{
    padding-right: 16px;
    background: url(../img/Rectangle.png);
    background-repeat: no-repeat;
-   background-position: right center;
+   background-position: right top  8px;
    color:white;
    font-size: 15px;
    font-weight: 600;
@@ -105,8 +105,37 @@ header a:hover, header a:visited,header a:focus{
    float:left;
    padding: 0;
    margin-right: 35px;
+   position:relative;
+   z-index: 100;
 }
-.mainMenu ul li a{
+.mainMenu ul li .subMenu{
+   padding: 10px 0;
+   display: none;
+   position: absolute;
+   min-width: 160px;
+   top: 50px;
+   border: 1px solid #1254FF;
+   background: url(image.png), radial-gradient(206.68% 297.06% at 138.37% 89.25%, rgba(255, 168, 38, 0.2) 0%, rgba(0, 20, 196, 0) 100%), radial-gradient(245.48% 206.26% at -4.84% -6.65%, rgba(33, 95, 255, 0.5) 0%, rgba(19, 24, 40, 0) 100%), #0D1636;
+}
+.mainMenu ul li .subMenu a{
+   display: block;
+   margin: 10px 0;
+   padding: 10px 30px;
+   font-size: 14px;
+   text-transform: uppercase;
+   font-weight: 600;
+   line-height: 14px;
+   display: block;
+   position: relative;
+   color: white;
+   text-decoration: none;
+   transition: all .2s ease-in-out;
+}
+.mainMenu ul li .subMenu a:hover{
+   background: #FFCB13;
+   color: #1254FF;
+}
+.mainMenu ul li > a{
    font-size: 14px;
    text-transform: uppercase;
    font-weight: 600;
@@ -132,13 +161,13 @@ header a:hover, header a:visited,header a:focus{
    bottom: 0;
    transition: width .35s linear;
 }
-.mainMenu ul li a:hover:before,.mainMenu ul li a.active::before{
+.mainMenu ul li > a:hover:before,.mainMenu ul li > a.active::before{
    width: 100%;
 }
 .mainMenu ul li .wdcaret{
    padding-right: 22px;
    background:url(../img/down.png);
-   background-position: center right;
+   background-position: right top 30px;
    background-repeat: no-repeat;
 }
 
@@ -580,6 +609,7 @@ header a:hover, header a:visited,header a:focus{
    margin-bottom: 100px;
 }
 .commentsArea .sortBy{
+   position: relative;
    font-weight: bold;
    font-size: 15px;
    line-height: 120%;
@@ -593,6 +623,23 @@ header a:hover, header a:visited,header a:focus{
    padding-right: 20px;;
    background-position: center right;
    background-repeat: no-repeat;
+}
+.commentsArea .sortBy .options{
+   position: absolute;
+   width: 100%;
+   margin-top: 10px;
+   display: none;
+   border: 1px solid rgba(0,0,0,0.2);
+}
+.commentsArea .sortBy .options span{
+   display: block;
+   text-align: right;
+   transition:all .25s ease;
+   padding: 10px 15px;
+}
+.commentsArea .sortBy .options span:hover{
+   background: rgb(231, 224, 224);
+   /* color: white;; */
 }
 .commentsArea .title{
    font-weight: bold;
@@ -697,14 +744,15 @@ header a:hover, header a:visited,header a:focus{
 }
 .joinArea .btnApply{
    width: 275.62px;
-   padding: 14px 0;
+   /* padding: 14px 0; */
+   height: 42px;
+   line-height: 42px;;
    margin: 0 auto;
    background: #1254FF;
    border-radius: 57.1801px;
    display: block;
    font-weight: 600;
    font-size: 13.2936px;
-   line-height: 100%;
    align-items: center;
    color: #FFFFFF;
    text-align: center;
@@ -744,6 +792,12 @@ header a:hover, header a:visited,header a:focus{
    margin-bottom: 12px;
    background: rgba(54, 77, 152, 0.3);
    border-radius: 2px;
+   transition: transform .2s; /* Animation */
+}
+.stories .storyBox:hover{
+   transform:scale(1.15);
+   box-shadow: 0 0 11px rgba(33,33,33,.5); 
+   margin: 0;
 }
 .stories .storyBox .feedBack{
    text-align: left;
