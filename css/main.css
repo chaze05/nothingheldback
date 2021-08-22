@@ -11,7 +11,7 @@ header{
 header .bigContainer{
    max-width: 1600px;
    width: 100%;
-   padding: 16px 50px 0;
+   padding: 30px 50px 0;
    margin: 0 auto ;
 }
 body{
@@ -34,6 +34,7 @@ header a:hover, header a:visited,header a:focus{
    display: flex; 
    justify-content: space-between;
    align-items: center;
+   margin-bottom: 16px;
 }
 .logo{
    padding-right: 25px;
@@ -141,7 +142,7 @@ header a:hover, header a:visited,header a:focus{
    font-weight: 600;
    line-height: 14px;
    display: block;
-   padding: 28px 0 30px;
+   padding: 34px 0 30px;
    position: relative;
    color: white;
    text-decoration: none;
@@ -242,12 +243,13 @@ header a:hover, header a:visited,header a:focus{
    margin-bottom: -5px;
 }
 
-.wrapper{   
+.vidDetails .wrapper,.wrapper{   
    max-width: 1198px;
    width: 100%;
    margin:0 auto;
    padding: 35px 48px;
    background:white;
+   overflow: hidden;
 }
 .vidDetails .author img{
    width: 48.18px;
@@ -271,7 +273,7 @@ header a:hover, header a:visited,header a:focus{
    text-transform: uppercase;
    color: #586795;
    display: block;
-   margin-top: 15px;
+   margin-top: 10px;
 }
 
 .vidDetails .detailsBox  .btndDownload{
@@ -306,11 +308,23 @@ header a:hover, header a:visited,header a:focus{
 }
 
 .vidDetails .authorBox{
-   margin-top: 80px;
+   margin-top: 50px;
    display: flex;
    justify-content: space-between;
    align-items: center;
    margin-bottom: 40px;
+   position: relative;
+}
+.vidDetails .authorBox:before{
+   position: absolute;
+   width: 150%;
+   left: -48px;
+   height: 1px;
+   top: -30px;
+   right: 0;
+   margin: auto;
+   content: '';
+   background: #e5e5e5;
 }
 .vidDetails .authorBox span{
    display: block;
@@ -374,6 +388,18 @@ header a:hover, header a:visited,header a:focus{
    padding-bottom:15px;
    border-bottom: 2px solid #1254FF;
    margin-bottom: 25px;
+   position: relative;
+}
+.vidDetails .about span:before{
+   position: absolute;
+   content: '';
+   width: 1200px;
+   height: 1px;
+   background: #e5e5e5;
+   left: -48px;
+   right: 0;
+   bottom: -3px;
+   margin: auto;
 }
 .vidDetails .about p{
    height: 101px;
@@ -408,6 +434,7 @@ header a:hover, header a:visited,header a:focus{
    margin-top: 15px;
 }
 .trainingArea .heading{
+   padding-top: 12px;
    margin-bottom: 32px;;
 }
 .trainingArea .heading span{
