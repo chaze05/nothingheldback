@@ -369,6 +369,7 @@ header a:hover, header a:visited,header a:focus{
    margin-bottom: 10px;
 }
 
+/* TRAINING AREA */
 
 .trainingArea{
    margin-top: 15px;
@@ -438,6 +439,7 @@ header a:hover, header a:visited,header a:focus{
    height: 20px;
    margin: auto;
 }
+
 .trainingArea .vidHolder:last-of-type{
    margin-bottom: 15px;
 }
@@ -476,6 +478,10 @@ header a:hover, header a:visited,header a:focus{
    color: #0F131A;
    opacity: 0.7;
 }
+.trainingArea .vidHolder.current .vidTitle span,.trainingArea .vidHolder .vidTitle:hover span{
+   opacity: 1;
+   text-decoration: none;
+}
 .trainingArea .vidHolder .vidDownlaod{
    font-weight: 600;
    font-size: 16px;
@@ -486,8 +492,12 @@ header a:hover, header a:visited,header a:focus{
    text-decoration: none;
    /* color: #0F131A; */
 }
+.trainingArea .vidHolder.current .vidDownlaod,.trainingArea .vidHolder .vidDownlaod:hover{
+   color: #0F131A;
+}
 
 
+/* SIGN UP */
 .signUp{
    margin-top: 15px;
 }
@@ -557,6 +567,8 @@ header a:hover, header a:visited,header a:focus{
    width: 0;
    margin: 0;
 }
+
+/* COMMENTS AREA */
 
 .commentsArea{
    margin-top: 15px;
@@ -641,11 +653,143 @@ header a:hover, header a:visited,header a:focus{
    text-decoration: none;
 }
 
+/* BOOTM AREA */
+
 .joinArea{
+   margin-top: 122px;
+   padding: 107px 299px 70px 299px ;
    background: url(image.png), radial-gradient(206.68% 297.06% at 138.37% 89.25%, rgba(255, 168, 38, 0.2) 0%, rgba(0, 20, 196, 0) 100%), radial-gradient(240.21% 180.99% at 85.75% 120.66%, rgba(33, 95, 255, 0.5) 0%, rgba(19, 24, 40, 0) 100%), #0D1636;
 }
 .joinArea .wrapper{
    text-align: center;
    background: transparent;
+   text-align: center;
+}
+.joinArea .yellow{
+   display: block;
+   font-weight: 600;
+   font-size: 13px;
+   line-height: 20px;
+   text-align: center;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+   color: #FFCB13;
+   margin: 30px 0 16px 0;
+}
+.joinArea .title{
+   display: block;
+   font-weight: 600;
+   font-size: 43px;
+   line-height: 120%;
+   text-align: center;
+   letter-spacing: -0.02em;
+   color: #FFFFFF;
+   margin-bottom: 16px;
+}
+.joinArea .desc{
+   display: block;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 130%;
+   text-align: center;
+   letter-spacing: 0.214124px;
+   color: #CEDBFF;
+}
+.joinArea .btnApply{
+   width: 275.62px;
+   padding: 14px 0;
+   margin: 0 auto;
+   background: #1254FF;
+   border-radius: 57.1801px;
+   display: block;
+   font-weight: 600;
+   font-size: 13.2936px;
+   line-height: 100%;
+   align-items: center;
+   color: #FFFFFF;
+   text-align: center;
+   text-decoration: none;
+   margin: 30px auto 54px auto;
+   transition: all .5s ease-in-out;
+}
+.joinArea .btnApply img{
+   margin-right: 5px;
+   transition: all .5s ease-in-out;
+}
+.joinArea .btnApply:hover{
+   color: #1254FF;
+   background: #FFFFFF;
+}
+.joinArea .btnApply:hover img{   
+   width: 0;
+   margin: 0;
+}
+.joinArea .starHolder{
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 130%;
+   text-align: center;
+   letter-spacing: 0.214124px;
+   color: #CEDBFF;
+   display: block;
+   text-align: center;
+   margin-bottom: 45px;;
+}
+.stories {
+   max-width: 1004px;
+   margin: 0 auto;
+}
+.stories .storyBox{
+   width: 326px;
+   margin-bottom: 12px;
+   background: rgba(54, 77, 152, 0.3);
+   border-radius: 2px;
+}
+.stories .storyBox .feedBack{
+   text-align: left;
+   padding: 23px 26px;
+}
+.stories .storyBox .feedBack img{
+   width: 48px;
+   height: 48px;
+   border-radius: 1000px;
+}
+.stories .storyBox .feedBack .title{
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 26px;
+   letter-spacing: 0.214124px;
+   display: block;
+   color: #FFFFFF;
+   margin-top: 24px;;
+   margin-bottom: 5px;
+   display: block;
+   text-align: left;
+}
+.stories .storyBox .feedBack .text{
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 140%;
+   color: #C4D3FF;
+   margin-bottom: 24px;
+}
+.stories .storyBox .feedBack .author, .stories .storyBox .feedBack .profession{
+   font-weight: 600;
+   font-size: 13px;
+   line-height: 130%;
+   letter-spacing: 0.214124px;
+   color: #C4D3FF;
+   display: block;
 }
 
+.feedback .readMore{
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 130%;
+   text-align: center;
+   letter-spacing: 0.214124px;
+   color: #FFC700;
+   text-decoration: none;
+   display: block;
+   margin-top: 34px;
+}
