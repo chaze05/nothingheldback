@@ -347,7 +347,7 @@ header a:hover, header a:visited,header a:focus{
    position: absolute;
    content: url(../img/check.png);
    right: 40px;
-
+   top: 2px;
 }
 .vidDetails .authorBox .author .role{
    font-weight: 600;
