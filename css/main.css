@@ -3,6 +3,87 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* BURGER */
+/* Icon 3 */
+#nav-icon3 {
+   display: none;
+    width: 46px;
+    height: 27px;
+    position: fixed;
+    margin: 5pxauto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    top: 30px;
+    left: 12px;
+    z-index: 999999;
+}
+
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 45px;
+  background: #FFCB13;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+  top: 10px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 20px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+/* BURGER */
+
+
 header{
    border-top: 5px solid #1254FF;
    background: url(image.png), radial-gradient(206.68% 297.06% at 138.37% 89.25%, rgba(255, 168, 38, 0.2) 0%, rgba(0, 20, 196, 0) 100%), radial-gradient(245.48% 206.26% at -4.84% -6.65%, rgba(33, 95, 255, 0.5) 0%, rgba(19, 24, 40, 0) 100%), #0D1636;
@@ -660,6 +741,7 @@ header a:hover, header a:visited,header a:focus{
    width: 100%;
    margin-top: 10px;
    display: none;
+   background:white;
    border: 1px solid rgba(0,0,0,0.2);
 }
 .commentsArea .sortBy .options span{
@@ -680,9 +762,7 @@ header a:hover, header a:visited,header a:focus{
    color: #0F131A;
    text-transform:capitalize;
 }
-.commentsArea .title .count{
-   margin-left: 8px;
-}
+
 .commentsList .comment{
    display: flex;
    /* align-items: center; */
@@ -877,4 +957,243 @@ header a:hover, header a:visited,header a:focus{
    text-decoration: none;
    display: block;
    margin-top: 34px;
+}
+
+.forMobile{
+   display: none;
+}
+
+
+/* RESPONSIVE AREA */
+
+@media (max-width:1600px){
+   .mainMenu ul li{
+      margin-right: 15px;
+   }
+   .joinArea{
+      padding-left: 150px;
+      padding-right: 150px;
+   }
+}
+@media (max-width:1400px){
+   .joinArea{
+      padding-left: 75px;
+      padding-right: 75px;
+   }
+}
+@media (max-width:1350px){
+   #nav-icon3 {
+      display: block;
+   }
+   .topArea{
+      justify-content: center;
+   }
+   .forDesktop{
+      display: none;
+   }
+   .forMobile{
+      display: block;
+   }
+   .mobileHolder{
+      position: relative;
+      z-index: 999999;
+      max-width: 280px;
+      margin: 0 auto;
+      padding: 60px 30px;
+   }
+   .mainMenu ul li{
+      margin-right: 15px;
+   }
+   .mainMenu{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: url(image.png), radial-gradient(206.68% 297.06% at 138.37% 89.25%, rgba(255, 168, 38, 0.2) 0%, rgba(0, 20, 196, 0) 100%), radial-gradient(245.48% 206.26% at -4.84% -6.65%, rgba(33, 95, 255, 0.5) 0%, rgba(19, 24, 40, 0) 100%), #0D1636;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      left: -100%;
+      transition: all .5s ease-in-out;
+      overflow: auto;
+   }
+   .mainMenu.open{
+      left: 0;
+   }
+   .mainMenu ul{
+      margin-bottom: 20px;
+   }
+   .mainMenu ul li{
+      float: unset;
+   }
+   .mainMenu ul li a{
+      padding:25px 0;
+   }
+   .mainMenu ul li.search{
+      position: relative;
+      display: none;
+   }
+   .mainMenu ul li.search a{
+      padding:0;
+      display: block;
+   }
+   .mainMenu ul li .subMenu{
+      position: relative;
+      top: 0;
+   }
+   .mobileHolder .profileBox{
+      display: block;
+   }
+   .mobileHolder .profileBox .profileInfo{
+      margin: 0;
+      padding: 0;
+      margin-bottom: 25px;
+   }
+   .mobileHolder .profileBox .profileInfo:before{
+      display: none;
+   }
+   .mobileHolder .profileBox  .profileInfo .pic{
+      margin: 0;
+      margin-top: -3px;
+   }
+   .mainMenu ul li .wdcaret{
+      background-position: right top 26px;
+   }
+}
+
+@media only screen and (max-width:1200px){
+   .videoSection .infoArea{
+      text-align: center;
+   }
+   .videoSection .btnNext{
+      position: relative;
+      margin: 20px auto;
+   }
+   .wrapper{
+      padding: 30px !important;
+   }
+   .stories .storyBox{
+         width: 32%;
+   }
+   .signUp .title{
+      font-size: 20;
+   }
+   
+}
+
+@media (max-width:992px){
+   .vidDetails .detailsBox .btndDownload{
+      position: relative;
+      display: block;
+      margin-top: 20px;
+      width: 100%;
+   }
+   .signUp .wrapper .nextCall{
+      text-align: center;
+   }
+   .signUp .wrapper .nextCall span{
+      display: block;
+      margin: 10px 0;
+   }
+   .signUp .btnSignup{
+      position: relative;
+      display: block;
+      margin: 20px auto 0;
+   }
+   .commentsArea .title{
+      font-size: 20px;
+   }
+   .stories .storyBox{
+     width: 48%;
+   }
+   .joinArea{
+      margin-top: 50px;
+   }
+   .commentsArea .headerArea{
+      margin-bottom: 40px;
+   }
+   .commentsArea .title .count{
+      margin-left: 3px;
+   }
+}
+
+@media (max-width:767px){
+   .wrapper{
+      padding:30px 15px !important;
+   }
+   .stories .storyBox{
+     width: 100%;
+   }
+   .joinArea{
+      padding-left: 0;
+      padding-right: 0;
+   }
+
+   .infoArea{
+      padding: 0 15px;
+      text-align: center;
+   }
+   .videoSection .btnNext{
+      position: relative;
+      margin-bottom: 20px;
+   }
+   .vidDetails .detailsBox .btndDownload{
+      position: relative;
+      margin-top: 20px;
+      width: 100%;
+   }
+   .signUp .wrapper .nextCall{
+      text-align: center;
+   }
+   .signUp .btnSignup{
+      position: relative;
+      margin-top: 20px;
+      display: block;
+      width: 100%;
+   }
+   .videoBox iframe{
+      height: 500px !important;
+   }
+   .trainingArea .vidTitle img{
+      margin-right: 15px;
+   }.
+   .commentsArea .title .count{
+      margin-left: 2px;
+   }
+}
+@media (max-width:592px){
+      .signUp .date{
+         margin-right: 0;;
+         display: block;
+         margin-bottom:15px;
+      }
+}
+@media (max-width:450px){
+   .videoBox iframe{
+      height: 400px !important;
+   }
+   .trainingArea .vidHolder{
+      display: block;
+   }
+   .trainingArea .vidTitle:after{
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 55px;
+      background: #CAD4DF;
+      left: 10px;
+      bottom: -59px;
+   }
+   .trainingArea .vidHolder .vidDownlaod{
+      display: block;
+      margin-top: 15px;
+      text-align: center;
+   }
+}
+@media (max-width:320px){
+   .commentsArea .title{
+      font-size:15px;
+   }
+   .commentsArea .sortBy{
+      font-size: 13px;
+   }
 }

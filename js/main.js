@@ -2,7 +2,7 @@ $(function(){
     // masonry
     $('.stories').masonry({
         itemSelector: '.storyBox',
-        columnWidth: 326,
+        columnWidth: '.storyBox',
         gutter:12,
         horizontalOrder: true
     });
@@ -43,4 +43,8 @@ $(function(){
         $(this).parents('.sortBy').find('.selected').text(sort);
         $(this).parent().fadeOut();
     })
+    $('#nav-icon3').click(function(){
+		$(this).toggleClass('open');
+        $('.mainMenu').toggleClass('open');
+	});
 });
