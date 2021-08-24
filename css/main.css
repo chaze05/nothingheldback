@@ -86,8 +86,10 @@
 
 header{
    border-top: 5px solid #1254FF;
-   background: url(image.png), radial-gradient(206.68% 297.06% at 138.37% 89.25%, rgba(255, 168, 38, 0.2) 0%, rgba(0, 20, 196, 0) 100%), radial-gradient(245.48% 206.26% at -4.84% -6.65%, rgba(33, 95, 255, 0.5) 0%, rgba(19, 24, 40, 0) 100%), #0D1636;
-
+   /* background: url(../img/headerbg.png), radial-gradient(206.68% 297.06% at 138.37% 89.25%, rgba(255, 168, 38, 0.2) 0%, rgba(0, 20, 196, 0) 100%), radial-gradient(245.48% 206.26% at -4.84% -6.65%, rgba(33, 95, 255, 0.5) 0%, rgba(19, 24, 40, 0) 100%), #0D1636; */
+   background: url("../img/headerbg.png");
+   background-size: cover;
+   background-position: center center;
 }
 header .bigContainer{
    max-width: 1600px;
@@ -816,7 +818,10 @@ header a:hover, header a:visited,header a:focus{
 .joinArea{
    margin-top: 122px;
    padding: 107px 299px 70px 299px ;
-   background: url(image.png), radial-gradient(206.68% 297.06% at 138.37% 89.25%, rgba(255, 168, 38, 0.2) 0%, rgba(0, 20, 196, 0) 100%), radial-gradient(240.21% 180.99% at 85.75% 120.66%, rgba(33, 95, 255, 0.5) 0%, rgba(19, 24, 40, 0) 100%), #0D1636;
+   /* background: url(../img/fedbackbg.png), radial-gradient(206.68% 297.06% at 138.37% 89.25%, rgba(255, 168, 38, 0.2) 0%, rgba(0, 20, 196, 0) 100%), radial-gradient(240.21% 180.99% at 85.75% 120.66%, rgba(33, 95, 255, 0.5) 0%, rgba(19, 24, 40, 0) 100%), #0D1636; */
+   background: url("../img/fedbackbg.png");
+   background-size: cover;
+   background-position: center center;
 }
 .joinArea .wrapper{
    text-align: center;
