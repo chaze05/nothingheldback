@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://db.onlinewebfonts.com/c/8de7c45e410de3f3a0f5dbfec43f958d?family=FS+Elliot+Pro" rel="stylesheet"
+    type="text/css" />
+
+<style>
+body{
+    font-family: "FS Elliot Pro";
+}
+.holder{
+  width:100%;
+  max-width:725px;
+  border:1px solid #193B65;
+  border-radius: 30px;
+  margin:0 auto;
+}
+.holder h4{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 24px 32px;
+    margin: 0;
+    border-bottom: 1px solid #193B65;
+}
+.settingsBox{
+    display:flex;
+    justify-content:space-evenly;
+    padding: 24px 32px;
+    border-radius: 30px;
+}
+.settingsBox > div{
+    flex: 1 0 316px;
+}
+.holder > div label{
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3B4358;
+    opacity: 0.8;
+    margin-bottom: 12px;
+    text-transform: capitalize;
+}
+.settingsBox > div input{
+    width: 100%;
+    max-width: 296px;
+    height: 53px;
+    background: #FBFCFF;
+    border: 1px solid #D6DEEB;
+    line-height: 53px;
+    border-radius: 6px;
+    padding-left: 16.07px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+    /* identical to box height, or 161% */
+    color: #263348;
+    text-transform: capitalize;
+}
+.advance{
+    display:flex;
+    flex-direction:row;
+    height:0;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    background: #F0F5FA;
+    transition: all .35s ease-in-out;
+    border-radius: 30px;
+    display: none;
+}
+.advance.open{
+    height: 240px;
+    padding: 12px 32px;
+    display: flex;
+}
+.advance > div{
+  /* width: 50%; */
+  flex: 1 0 50%;
+  margin: 12px 0;
+  position: relative;
+}
+.advance > div span,.advance > div ul li{
+    display: block;
+    width: 316px; 
+    height: 53px;  
+    background: #FBFCFF;
+    border: 1px solid #D6DEEB;
+    box-sizing: border-box;
+    border-radius: 6px;
+    line-height: 53px;
+    padding-left: 16.07px;
+    cursor: pointer;
+    color: #263348;
+    position: relative;
+}
+.advance > div .selected:before{
+    position: absolute;
+    content:url(down.png);
+    right: 12px;
+    background-position: center center;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    transform: rotateX(180deg);
+    transition: all .35s ease-in-out;
+}
+.advance > div .selected.open:before{
+    transform: rotateX(360deg);
+}
+.advance > div ul {
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+    display: none;
+    border: 1px solid #D6DEEB;
+    border-top:0
+}
+.advance > div ul li{
+    border:0;
+    border-radius: 0;
+}
+.advance > div ul li:hover{
+    background: rgba(255,255,255.7);
+}
+.btnAdvance{
+    position: relative;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 29px;
+    color: #193B65;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    text-decoration: none;
+    display: block;
+    padding-left: 32px;
+    text-transform: capitalize;
+    margin-bottom: 16px;
+}
+.btnAdvance:before{
+    position: absolute;
+    content:url(down.png);
+    width: 30px;
+    height: 30px;
+    right: 32px;
+    background-position: center center;
+    top:0;
+    bottom: 0;
+    margin: auto;
+
+}
+.btnAdvance.open:before{
+    transform: rotateX(180deg);
+}
+
+
+/* satisfied component */
+.satisfiedBox{
+    border: 3px solid #3973CB;
+    background: white;
+    padding: 40px 60px 60px;
+    max-width: 1209px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.topPart{
+    display: flex;
+    align-items: center;
+}
+.question .qCount{
+    display: block;
+    width:170px;
+    padding:12px 0; 
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 28px;
+    opacity: 0.3;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #263348;
+    opacity: 0.3;
+}
+.question{
+    flex-basis: 35%;;
+}
+.question h5{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 39px;
+    text-align: left;
+    flex-basis: 30%;
+    color: #263348;
+    margin: 0;
+}
+
+.level{
+    display: flex;
+    flex-basis: 65%;
+    justify-content: space-between;
+    padding: 15px 60px;
+}
+.level .smileBox span{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #263348;
+    opacity: 0.35;
+    margin-top: 19px;
+}
+.level .smileBox img{
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+.level .smileBox.active img{
+    border: 2px solid #1953A5;
+}
+.level .smileBox.active span{
+    color: #263348;
+    opacity: 1;
+}
+.bar{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.levelbar span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #263348;
+    opacity: 0.3;
+}
+.bar .levelbar{
+    position: relative;
+    width: 100%;
+    max-width: 629px;
+    padding-left:55px;
+    height: 12px; 
+    border-radius: 10px;
+}
+.bar .level{
+    position: relative;
+    width: 0;
+    height: 12px;
+    background-image: linear-gradient(90deg, #1953A5 0%, #0397E5 100%);
+    transition: 100px;
+    width: 100%;
+    padding: 0;
+    border-radius: 10px;
+    opacity: 1;
+}
+.bar .next{
+    width: 199px;
+    height: 57px;
+    display: block;
+    position: absolute;
+    line-height: 57px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-transform: uppercase;
+    column-rule: white;
+    margin: auto;
+    text-align: center;
+    background: #0397E5;
+    border-radius: 35px;
+    font-size: 14px;
+    /* identical to box height */
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 600;
+}
+/* satisfied component */
+</style>
+
+</head>
+<body>
+    <div class="satisfiedBox">
+        <div class="topPart">
+            <div class="question">
+                <span class="qCount">
+                    Question 2 / 2
+                </span>
+                <h5>How satisfied are you with your internet?</h5>
+            </div>
+            <div class="level">
+                <div class="smileBox">
+                    <img src="0.png" alt="">
+                    <span data-value="0">Not Happy</span>
+                </div>
+                <div class="smileBox">
+                    <img src="1.png" alt="">
+                    <span data-value="25">Neutral</span>
+                </div>
+                <div class="smileBox">
+                    <img src="3.png" alt="">
+                    <span data-value="50">Fine</span>
+                </div>
+                <div class="smileBox active">
+                    <img src="2.png" alt="">
+                    <span data-value="75"n>Happy</span>
+                </div>
+                <div class="smileBox">
+                    <img src="4.png" alt="">
+                    <span data-value="100">Very Happy</span>
+                </div>
+            </div>
+        </div>
+        <div class="bar">
+            <div class="levelbar">
+                <span class="value">100%</span>
+                <span class="level"></span>
+            </div>
+            <span class="next">Next</span>
+        </div>
+    </div>
+    <div class="holder">
+        <h4>2.4GHz</h4>
+        <div class="settingsBox">
+            <div class="wifiSet">
+                <label>wi-fi name</label>
+                <input type="text" disabled value="wi-fi default">
+            </div>
+            <div class="wifiPass">
+                <label>wi-fi password</label>
+                <input type="password" disabled value="wi-fi default">
+            </div>
+        </div>
+        <a href="#" class="btnAdvance">advance settigns</a>
+        <div class="advance open">
+            <div class="ssid">
+                <label>SSID Number</label>
+                <span class="selected">1</span>
+                <ul class="options">
+                    <li>1</li>
+                    <li>2</li>
+                </ul>
+            </div>
+            <div class="ssid">
+                <label>Authentication</label>
+                <span class="selected">WPA / WPA2</span>
+                <ul class="options">
+                    <li>WPA</li>
+                    <li>WPA2</li>
+                </ul>
+            </div>
+            <div class="ssid">
+                <label>Encryption Mode</label>
+                <span class="selected">TKIP & AES</span>
+                <ul class="options">
+                    <li>1</li>
+                    <li>2</li>
+                </ul>
+            </div>
+            <div class="ssid">
+                <label>WPA Key Interval</label>
+                <span>3600</span>
+            </div>
+        </div>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $('.btnAdvance').on('click', function(){
+        $(this).toggleClass('open');
+        $('.advance').toggleClass('open')
+    })
+    $('.selected').on('click',function(){
+        $(this).toggleClass('open');
+        $(this).next().fadeToggle();
+    })
+    $('.options li').on('click',function(){
+        var value = $(this).text();
+        $(this).parents().eq(1).find('span').text(value)
+        $(this).parent().fadeOut();
+    })
+</script>
+</body>
+</html>
